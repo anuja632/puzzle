@@ -1,0 +1,740 @@
+   * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+
+  font-family: 'Playfair Display', sans-serif;
+    background: #fff;
+      color: #000;
+    }
+
+    .container {
+      display: flex;
+      /* flex-wrap: wrap; */
+      justify-content: space-between;
+      /* align-items: center; */
+      /* padding: 2rem; */
+      position: relative;
+      min-height: 600px;
+      overflow: hidden;
+      background-image: url("https://alahmaradv.com/wp-content/uploads/2024/02/hero-3.webp");
+
+    }
+
+    .left {
+      flex: 1 1 30%;
+      max-width: 30%;
+      z-index: 2;
+        margin-left: 5%;
+        margin-top:60px;
+    }
+
+    .left img.logo {
+      height: 60px;
+      margin-bottom: 1.5rem;
+    }
+
+    .left h1 {
+      font-family: 'Playfair Display', serif;
+font-size: 50px;
+    font-weight: 800;
+    line-height: 75px;
+
+    }
+
+    .left h1 span {
+      color: red;
+    }
+
+    .features {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  /* flex-wrap: wrap; */
+  margin-top:15%;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /* width:350px; */
+  font-family: 'Playfair Display', sans-serif;
+
+}
+
+.icon i {
+  font-size: 2rem;
+      color: red;
+  margin-bottom: 0.5rem;
+}
+
+
+
+    /* Centered image with shapes */
+    .center-img {
+      flex: 1 1 30%;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .center-img img {
+      /* width: 90%;
+      max-width: 420px; */
+      position: relative;
+      z-index: 2;
+      height:660px;
+    }
+
+    .center-img::before,
+    .center-img::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 0, 0, 0.08);
+      z-index: 1;
+    }
+
+    .center-img::before {
+      width: 250px;
+      height: 250px;
+      top: -30px;
+      left: 10%;
+    }
+
+    .center-img::after {
+      width: 200px;
+      height: 200px;
+      bottom: -40px;
+      right: 10%;
+    }
+
+    /* Right form */
+    .right {
+      flex: 1 1 20%;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      z-index: 2;
+      margin-right: 50px;
+          margin-top: 30px;
+
+    }
+
+
+    .right h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-align:center;
+    
+    }
+
+    .right h2 span {
+      color: red;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 0.75rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+/* Fix for intl-tel-input field */
+.iti {
+  width: 100%;
+}
+
+.iti input {
+  width: 100% !important;
+  padding-left: 50px !important; /* Leave space for flag */
+}
+    .btn {
+      width: 100%;
+      padding: 0.9rem;
+      background: #000;
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #333;
+    }
+
+    .footer-note {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: #777;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .aa{
+              flex: 1 1 20%;
+    }
+.social-sidebar {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  padding: 1rem 0.5rem;
+  background-color: transparent; /* Keep transparent */
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  z-index: 1000;
+  transition: color 0.3s ease;
+}
+
+.social-sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+
+.social-sidebar ul li {
+  margin: 10px 0;
+  color: white; /* default white */
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.social-sidebar li:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.social-sidebar .follow-text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-family: 'Playfair Display', sans-serif;
+  font-size: 0.9rem;
+  margin-top: 20px;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.social-sidebar .divider {
+  color: white;
+  margin: 10px 0;
+  transition: color 0.3s ease;
+}
+
+
+
+.social-sidebar.scroll-down ul li {
+  color: black;
+}
+
+
+
+
+.what-we-do {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: 'Playfair Display', sans-serif;
+  background-color: #fff;
+}
+
+.content-left {
+  flex: 1 1 300px;
+  max-width: 450px;
+  padding:5rem;
+}
+
+.content-left h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.content-left p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.video-button {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  color: #000;
+  cursor: pointer;
+}
+
+.video-button i {
+  font-size: 40px;
+  color: #d32f2f;
+  margin-right: 10px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  /* flex: 2 1 600px; */
+  gap: 20px;
+}
+
+.feature-card {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 20px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+  width:350px;
+}
+
+.feature-card:hover {
+  box-shadow: 
+    0 0 20px rgba(255, 255, 255, 0.8),  /* bright white glow */
+    0 6px 20px rgba(0, 0, 0, 0.1);      /* soft shadow */
+  transform: translateY(-5px);
+}
+
+
+.feature-card i {
+  font-size: 36px;
+  color: #c62828;
+  margin-bottom: 15px;
+}
+
+.feature-card h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.feature-card p {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.5;
+}
+.scroll-to-top {
+  position: fixed;
+  left: 20px;
+  top: 67%;
+  transform: translateY(-50%);
+  writing-mode: vertical-rl;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  color: black;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.scroll-to-top .line {
+  width: 1px;
+  height: 40px;
+  background-color: black;
+  margin: 8px auto 0;
+    writing-mode: vertical-rl;
+}
+.hide-on-scroll-up {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+ 
+.consultation-banner {
+  background: url('https://alahmaradv.com/wp-content/uploads/2024/02/light-grey-digital-background.webp') center/cover no-repeat;
+  background-color: #c00; /* fallback color */
+  color: #fff;
+  padding: 80px 40px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  min-height: 300px;
+  z-index: 1;
+}
+
+.consultation-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(204, 0, 0, 0.6); /* semi-transparent overlay */
+  z-index: 0;
+}
+.consultation-banner .content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.consultation-banner .content h2 {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1.2;
+  color:white;
+    z-index: 1;
+}
+
+.book-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #000;
+  color: #fff;
+  padding: 12px 24px;
+  margin-top: 30px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.book-btn:hover {
+  background: #333;
+}
+
+.arrow {
+  font-size: 18px;
+}.pricing-section {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.highlight {
+  color: #c00;
+}
+
+.pricing-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.card {
+  background: #f5f5f5;
+  border-radius: 20px;
+  padding: 30px 20px;
+  max-width: 300px;
+  width: 100%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+    font-family: 'Playfair Display', sans-serif;
+}
+
+.card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+    font-family: 'Playfair Display', sans-serif;
+}
+
+.card .tag {
+  background: #c00;
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+    font-family: 'Playfair Display', sans-serif;
+}
+
+.price {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.price small {
+  display: block;
+  font-size: 14px;
+  color: #888;
+}
+
+.price strong {
+  font-size: 28px;
+  color: #111;
+}
+
+.duration {
+  background: #e0e0e0;
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-top: 5px;
+  font-size: 13px;
+}
+
+.card ul {
+  text-align: left;
+  margin: 20px 0;
+  padding: 0;
+  list-style: none;
+
+}
+
+.card ul li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 20px;
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 15px;
+}
+
+.card ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #c00;
+}
+
+.btn {
+  background: #000;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Hover Styles (Red Themed) */
+.card:hover {
+  background: #c00;
+  color: #fff;
+}
+
+/* Invert tag and duration text on hover */
+.card:hover .tag,
+.card:hover .duration {
+  background: #fff;
+  color: #000;
+}
+
+/* Change checkmark bullets to white */
+.card:hover ul li::before {
+  color: #fff;
+}
+
+/* Change list item text to white */
+.card:hover ul li {
+  color: #fff;
+}
+
+/* Invert button on hover */
+.card:hover .btn {
+  background: #fff;
+  color: #000;
+}
+
+/* Make price section text white */
+.card:hover .price small,
+.card:hover .price strong {
+  color: #fff;
+}
+
+.faq-wrapper {
+  display: flex;
+  gap: 40px;
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.faq-left {
+  flex: 1;
+  min-width: 280px;
+}
+
+.faq-left h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: 'Georgia', serif;
+}
+
+.faq-cta-btn {
+  background-color: #c62828;
+  color: white;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 6px;
+  display: inline-block;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.faq-cta-btn:hover {
+  background-color: #a01f1f;
+}
+
+.faq-right {
+  flex: 2;
+  min-width: 300px;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.accordion-item {
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.accordion-title {
+  width: 100%;
+  text-align: left;
+  font-weight: bold;
+  padding: 15px 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+
+.accordion-title span {
+  font-size: 1.5rem;
+  transition: transform 0.3s;
+}
+
+.accordion-content {
+  padding: 0 20px 15px;
+  display: none;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.accordion-item.active .accordion-content {
+  display: block;
+}
+
+.accordion-item.active .accordion-title span {
+  transform: rotate(180deg);
+}
+
+.site-footer {
+  background-color: #000;
+  color: #fff;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-logo img {
+  max-width: 180px;
+}
+
+.footer-location, .footer-social {
+  max-width: 300px;
+}
+
+.footer-location h4,
+.footer-social h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #f5f5f5;
+}
+
+.footer-location p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 18px;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #c00;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .faq-wrapper {
+    flex-direction: column;
+  }
+
+  .faq-left, .faq-right {
+    width: 100%;
+  }
+}
+
+
+    @media (max-width: 992px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+      }
+
+      .left, .center-img, .right {
+        max-width: 100%;
+        flex: 1 1 100%;
+      }
+
+      .left {
+        order: 1;
+      }
+
+      .center-img {
+        order: 2;
+      }
+
+      .right {
+        order: 3;
+      }
+
+    }
