@@ -24,7 +24,11 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    
+
     }
+    
+
 
     .left {
       flex: 1 1 30%;
@@ -175,9 +179,7 @@ font-size: 50px;
       transition: background 0.3s ease;
     }
 
-    .btn:hover {
-      background: #333;
-    }
+  
 
     .footer-note {
       margin-top: 1rem;
@@ -403,6 +405,14 @@ font-size: 50px;
   /* flex: 2 1 600px; */
   gap: 20px;
 }
+@keyframes CSSscrollReveal {
+  from {
+    opacity: 0;
+    transform: translate(100px);
+  }
+}
+
+
 
 .feature-card {
   background-color: #fff;
@@ -413,7 +423,9 @@ font-size: 50px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   transition: 0.3s ease;
   width:350px;
+
 }
+
 
 .feature-card:hover {
   box-shadow: 
@@ -924,24 +936,13 @@ align-items: center;
         flex: 1 1 100%;
       }
 
-      .left {
-        order: 1;
-      }
-
-      .center-img {
-        order: 2;
-      }
-
-      .right {
-        order: 3;
-      }
 
     }
    .containered {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 16px;
-      padding: 20px;
+      padding: 40px;
       max-width:1200px;
       margin: auto;
     }
@@ -1048,8 +1049,12 @@ align-items: center;
   margin-bottom: 15px;
 }
 
-.industry-box:hover {
+/* .industry-box:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+} */
+.industry-box:hover {
+  background-color: #E6E6FA; /* Light violet */
+  box-shadow: 0 4px 12px rgba(138, 43, 226, 0.3); /* Soft violet shadow */
 }
 
 .icon-wrapper {
@@ -1101,9 +1106,18 @@ align-items: center;
   .col-md-6 {
     width: 50%;
   }
-  .col-md-4 {
-    width: 33.3333%;
-  }
+  
+.col-md-4 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+  .center-img img {
+    position: relative;
+    z-index: 2;
+    height: 660px;
+    
+    /* width: 100%; */
+}
 }
 
 html, body {
@@ -1111,4 +1125,123 @@ html, body {
     width: 100%;
     margin: 0;
     padding: 0;
+}
+
+.container {
+  display: flex;
+  border: 2px dashed #ccc;
+  padding: 30px;
+  gap: 40px;
+  max-width: 800px;
+  background: #fafafa;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.contact-form h2 {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"] {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact-form label {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+
+.contact-form button {
+  padding: 10px;
+  border: 1px solid #000;
+  background: transparent;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #000;
+  color: #fff;
+}
+
+.image-container {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-container img {
+  width: 100%;
+  max-width: 250px;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 50% 40% 30% 60% / 40% 60% 50% 30%;
+  border: 2px solid #000;
+}
+.checkbox-group label {
+  display: block;
+  margin-bottom: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+#whatsapp-float {
+  position: fixed;
+  bottom: 120px;  /* Set the distance from the bottom to 50px */
+  right: 40px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  font-size: 28px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+  text-decoration: none;
+}
+
+#whatsapp-float:hover {
+  background-color: #128c7e;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 480px) {
+  #whatsapp-float {
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    bottom: 20px;
+    right: 0px;
+  }
+  .scroll-to-top {
+        position: fixed;
+        left: 10px;
+        top: 67%;}
+  .center-img img {
+left:-100px;}
 }
