@@ -444,7 +444,7 @@ font-size: 50px;
 
 .what-we-do {
   display: flex;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
   padding: 50px;
   gap: 40px;
   justify-content: center;
@@ -954,6 +954,9 @@ box-shadow:
 }
 .what-we-do {
   padding:0px;
+  display: block;
+      justify-items: center; /* Centers items in the grid horizontally */
+
 }
 }
 
